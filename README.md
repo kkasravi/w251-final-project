@@ -13,7 +13,7 @@ Convert object labels into a text description.
 Fine-tune a GPT-4 language model on recipe data.
 Input the text description into the fine-tuned GPT-4 model to generate a recipe and cooking instructions.
 
-![Pipeline Diagram](path/to/your/image.png)
+![Pipeline Diagram](pipeline.png)
 
 
 
