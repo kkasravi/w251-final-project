@@ -1,7 +1,7 @@
 import os
 import openai
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = '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'
 
 # Example OpenAI Python library request
 MODEL = "gpt-3.5-turbo"

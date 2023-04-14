@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Recipe Generator",
+  "name_for_model": "recipe_generator",
+  "description_for_human": "Plugin that generates a recipe based on ingredients and cuisine type.",
+  "description_for_model": "Plugin that generates a recipe based on ingredients and cuisine type.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:3000/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "http://localhost:3000/logo.png",
+  "contact_email": "your-email@example.com",
+  "legal_info_url": "http://www.example.com/legal"
+}

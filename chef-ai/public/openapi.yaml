@@ -1,0 +1,59 @@
+openapi: 3.0.3
+info:
+  title: Recipe Generator API
+  description: An API for generating recipes based on ingredients and cuisine type.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+
+paths:
+  /api/generateRecipe:
+    post:
+      summary: Generate a recipe
+      operationId: generateRecipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RequestBody"
+      responses:
+        200:
+          description: The generated recipe
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResponseBody"
+        400:
+          description: Bad Request
+
+components:
+  schemas:
+    RequestBody:
+      type: object
+      properties:
+        ingredients:
+          type: array
+          items:
+            type: string
+          description: The list of ingredients to use in the recipe.
+        cuisine:
+          type: string
+          description: The type of cuisine to use in the recipe.
+      required:
+        - ingredients
+        - cuisine
+
+    ResponseBody:
+      type: object
+      properties:
+        recipe:
+          type: string
+          description: The generated recipe.
+        instructions:
+          type: string
+          description: The cooking instructions for the generated recipe.
+        mealDescription:
+          type: string
+          description: A description of the meal that can be used to generate an image.
