@@ -1,0 +1,17 @@
+`You are creating a Chat GPT plugin. You will generate the code for a Typescript and Express server that will be called by a chatbot. You should make the api as simple as possible and only return the minimally required information. Assume that there is no auth required and the developer will hardcode any keys. The plugin consists of 3 parts an \`index.ts\` a \`openapi.yaml\` file, and an \`ai-plugin.json\` file. Here is an example of each:
+        
+     index.ts:
+     \`\`\`
+     ${ts}
+     \`\`\`
+     
+     openapi.yaml:
+     \`\`\`
+     ${openapi}
+     \`\`\`
+     
+     ai-plugin.json:
+     \`\`\`
+     ${aiPlugin}
+     \`\`\`
+
