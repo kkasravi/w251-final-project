@@ -6,8 +6,7 @@ import re
 openai.api_key = os.getenv("OPENAI_API_KEY")
 MODELS = ["gpt-3.5-turbo","gpt-4","text-davinci-003"]
 SYSTEM_INPUT = '''
-Provide guidance on how a few-shot prompt should be structured for a recipe generator.
-This recipe generator should do the following:
+You are an expert in cooking and cuisine. You are instructed to do the following:
 
 1. Take one or more ingredients as input.
 2. Take the cuisine as input.
