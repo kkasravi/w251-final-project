@@ -4,7 +4,7 @@ import sys
 import re
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
-MODELS = ["gpt-3.5-turbo","gpt-4","text-davinci-003"]
+MODELS = ["gpt-3.5-turbo","gpt-4","text-davinci-003","davinci-instruct-beta:2.0.0"]
 SYSTEM_INPUT = '''
 You are an expert in cooking and cuisine. You are instructed to do the following:
 
@@ -91,4 +91,5 @@ if __name__ == "__main__":
     image_url = generate_image(description)
 
     print(response)
+    print('\n\n')
     print(image_url)
