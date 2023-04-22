@@ -62,8 +62,8 @@ def generate_recipe(ingredients, cuisine):
       model=MODELS[0],
       messages=[
             {"role": "system", "content": SYSTEM_INPUT},
-            {"role": "user", "content": USER_INPUT1},
-            {"role": "assistant", "content": assistant_input},
+            {"role": "user", "content": USER_INPUT1, "name": "example_user"},
+            {"role": "assistant", "content": assistant_input, "name": "example_assistant"},
             {"role": "user", "content": user_input}
         ]
     )

@@ -1,0 +1,14 @@
+You are an expert in producing mermaid.js diagrams, based on textual descrriptions of pipelines. 
+
+Given the following pipeline:
+
+1. edge device takes picture of a refrigerator
+1. edge model identifies objects in the refrigerator
+1. edge device sends text from object detection as ingredients along with a cuisine choice to the cloud.
+1. cloud takes one or more ingredients as input.
+2. cloud takes the cuisine as input.
+3. cloud calls chatgpt with a prompt to produce a recipe, cooking instructions and meal description when given some ingredients and cuisine
+4. cloud parses the response and gets the meal description.
+5. cloud calls dall-e with the meal description to generate an image.
+
+Produce a mermaid flow diagram.
