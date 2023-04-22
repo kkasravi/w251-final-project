@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChefAI</title>
+</head>
+<body>
+    <h1>Welcome to the ChefAI Tool!</h1>
+    <h2>From your fridge and pantry to your table.</h2>
+    <img src="{{url_for('static', filename='refrigerator-filled.png')}}" 
+		width="147" height="192"/>
+    <img src="{{url_for('static', filename='man-cooking.png')}}" 
+		width="111" height="192"/>
+	<img src="{{url_for('static', filename='family-meal.png')}}" 
+		width="192" height="148"/>
+
+	<p>Welcome! <a href="{{ url_for('login') }}">Enter your name.</a></p>
+
+</body>
+</html>

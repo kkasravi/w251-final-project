@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChefAI</title>
+</head>
+<body>
+    <h1>Welcome to the ChefAI Tool!</h1>
+    <h2>From your fridge and pantry to your table.</h2>
+    <img src="{{url_for('static', filename='refrigerator-filled.png')}}" 
+		width="147" height="192"/>
+    <img src="{{url_for('static', filename='man-cooking.png')}}" 
+		width="111" height="192"/>
+	<img src="{{url_for('static', filename='family-meal.png')}}" 
+		width="192" height="148"/>
+
+	{% if session['username'] %}
+		<p>Welcome {{ session['username'] }}!
+			<a href="{{ url_for('logout') }}">Logout</a></p>
+
+		<p>Cuisine Selection Drop-down
+			<select name="Cuisine Types" id="cuisine">
+			  <option value="Mexican">Mexican</option>
+			  <option value="Japanese">Japanese</option>
+			  <option value="French">French</option>
+			  <option value="American">American</option>
+			</select>
+		</p>
+
+		<p><a href="{{ url_for('upload_file') }}">
+			Upload a picture of your fridge</a></p>
+
+		<p>Uploaded Image</p>
+		{% set user_img = 'images/' + session['username'] + '.jpg' %}
+		<img src="{{url_for('static', filename=user_img)}}" 
+			width="192" height="148"/>
+		
+		<p>Labeled Image</p>
+		{% set user_img = 'preds/' + session['username'] + '.jpg' %}
+		<img src="{{url_for('static', filename=user_img)}}" 
+			width="192" height="148"/>
+		
+		<ul>
+		{% for item in img_dict %}
+			<li>{{item.name}}</li>
+			<li>{{item.place}}</li>
+			<li>{{item.mob}}</li>
+		{% endfor %}
+		</ul>
+		
+		<!--
+	
+		
+		#{% if session['username'] %}
+		<p>See recipes based on your available selection</p>
+		#{% else %}		
+		#{% endif %}		
+		-->
+		
+	{% else %}
+		<p>Welcome! <a href="{{ url_for('login') }}">Enter your name.</a></p>
+	{% endif %}
+
+</body>
+</html>
