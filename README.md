@@ -2,8 +2,8 @@
 
 ## Final Deliverables
 
-[Final Paper](final_deliverables/w251_final_paper.pdf)
-[Final Presentation](final_deliverables/w251_final_presentation_ChefAI.pdf)
+- [Final Paper](final_deliverables/w251_final_paper.pdf)
+- [Final Presentation](final_deliverables/w251_final_presentation_ChefAI.pdf)
 
 ## Using a vector database with chatgpt-retrieval-plugin 
 
